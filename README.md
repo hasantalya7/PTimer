@@ -9,6 +9,7 @@ PTimer is inspired by Pomodoro Technique which is a time management method. The 
 ![PTimer](https://user-images.githubusercontent.com/64413598/186222825-15f116e5-fd2e-42d3-a110-334dbbd49aa5.png)
 
 ### Usage method:
+* To start PTimer write ***python ptimer*** in command line (in same folder)
 * Select Pomodoro to start timer and focus on the task for 25 minutes.
 * After that take a break for 10 minutes.
 * Repeat 3-5 times until you finish the tasks.
