@@ -17,4 +17,4 @@ PTimer is inspired by Pomodoro Technique which is a time management method. The 
 ### Features:
 * PTimer is a CLI based pomodoro timer that works on command line.
 * PTimer works on all machines and operating systems with Python installed.
-* PTimer can be started by typing ./ptimer in Linux command line.
+* PTimer can be started by typing ***./ptimer*** in Linux command line.
