@@ -1,0 +1,86 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+# PTimer
+
+## A CLI based Pomodoro Timer to boost your productivity.
+
+The Pomodoro Technique is a productive way to work or study.
+The Pomodoro Technique uses a timer to break down work into intervals.
+You can find detailed information about the technique; https://en.wikipedia.org/wiki/Pomodoro_Technique.
+
+PTimer is inspired by Pomodoro Technique which is a time management method.
+The aim of PTimer is to help you focus on your work or study. 
+
+### Usage method:
+* Select Pomodoro to start timer and focus on the task for 25 minutes.
+* After that take a break for 10 minutes.
+* Repeat 3-5 times until you finish the tasks.
+
+### Features:
+* PTimer is a CLI based pomodoro timer that works on command line.
+* PTimer works on all machines and operating systems with Python installed.
+* PTimer can be started by typing ./ptimer in Linux command line.
+"""
+
+import os
+os.system('cls' if os.name == 'nt' else 'clear')
+import time as t
+
+__author__ = "Hasan Serdar"
+__copyright__ = "Copyright (C) 2022 Hasan Serdar"
+__credits__ = ["Hasan Serdar"]
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = "Hasan Serdar"
+__website__ = "https://hasantalya7.github.io/"
+__status__ = "Prototype"
+
+# Countdown function
+def stopwatch(sec):
+    while sec:
+        minn, secc = divmod(sec, 60)
+        timeformat = '{:02d}:{:02d}'.format(minn, secc)
+        print(timeformat, end='\r')
+        t.sleep(1)
+        sec -= 1
+
+while True:
+    menu = """
+    *** PTimer ***
+
+    (1) Pomodoro
+    (2) Break
+    (3) Credits
+    (4) Exit
+    """
+    print(menu)
+    choice = input("Make your choice:")
+    if choice == "1":
+        stopwatch(1500)
+        print('\a')
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print('\n Congrats, take a break, you deserve it.')
+    elif choice == "2":
+        stopwatch(600)
+        print('\a')
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print('\n Let\'s get back to work!')
+    elif choice == "3":
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print('\n', __credits__, '\n', __website__, '\n', __copyright__)
+        print( 'This program comes with ABSOLUTELY NO WARRANTY; \nGNU General Public License, see https://www.gnu.org/licenses/')
+
+    elif choice == "4":
+        break   
+    else:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print('Incorrect entry, try again.')
+
+bye="""
+Have a nice day.
+"""
+print(bye)
+
+if __name__ == 'ptimer':    #code to execute if called from command-line
+    main()
